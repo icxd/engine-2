@@ -23,12 +23,15 @@ class SceneRenderer {
         uniformsMap = UniformsMap(shaderProgram.getProgramId())
         uniformsMap.createUniform("projectionMatrix")
         uniformsMap.createUniform("modelMatrix")
+        uniformsMap.createUniform("viewMatrix")
         uniformsMap.createUniform("txtSampler")
     }
 
     fun render(scene: Scene) {
         shaderProgram.bind()
         uniformsMap.setUniform("projectionMatrix", scene.getProjection().getProjMatrix())
+        uniformsMap.setUniform("viewMatrix", scene.getCamera().getViewMatrix())
+
         uniformsMap.setUniform("txtSampler", 0)
 
         val models = scene.getModelMap().values

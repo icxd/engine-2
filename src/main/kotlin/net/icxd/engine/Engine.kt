@@ -2,8 +2,9 @@ package net.icxd.engine
 
 import net.icxd.engine.graphics.Renderer
 import net.icxd.engine.scene.Scene
+import net.icxd.game.Main
 
-class Engine(windowTitle: String, opts: Window.Companion.WindowOptions, val game: IGame) {
+class Engine(windowTitle: String, opts: Window.Companion.WindowOptions, private val game: Main) {
     companion object {
         const val TARGET_UPS: Int = 30
     }
@@ -54,8 +55,10 @@ class Engine(windowTitle: String, opts: Window.Companion.WindowOptions, val game
             deltaUpdate += (now - initialTime) / timeU
             deltaFps += (now - initialTime) / timeR
 
-            if (targetFps <= 0 || deltaFps >= 1)
+            if (targetFps <= 0 || deltaFps >= 1) {
+                window.getMouseInput().input()
                 game.input(window, scene, now - initialTime)
+            }
 
             if (deltaUpdate >= 1) {
                 val diffTimeMillis = now - updateTime

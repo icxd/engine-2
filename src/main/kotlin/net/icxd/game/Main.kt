@@ -2,6 +2,7 @@ package net.icxd.game
 
 import net.icxd.engine.Engine
 import net.icxd.engine.IGame
+import net.icxd.engine.MouseInput
 import net.icxd.engine.Window
 import net.icxd.engine.graphics.Material
 import net.icxd.engine.graphics.Mesh
@@ -9,13 +10,13 @@ import net.icxd.engine.graphics.Model
 import net.icxd.engine.graphics.Renderer
 import net.icxd.engine.scene.Entity
 import net.icxd.engine.scene.Scene
-import org.joml.Vector4f
 import org.lwjgl.glfw.GLFW.*
+import kotlin.properties.Delegates
+
 
 object Main : IGame {
-    private lateinit var cubeEntity: Entity
-    private val displInc = Vector4f()
-    private var rotation: Float = 0f
+    private const val MOUSE_SENSITIVITY = 0.1f
+    private const val MOVEMENT_SPEED = 0.005f
 
     @JvmStatic
     fun main(args: Array<String>) {
@@ -23,6 +24,9 @@ object Main : IGame {
         val engine = Engine("Game", Window.Companion.WindowOptions.defaultOptions(), game)
         engine.start()
     }
+
+    private lateinit var cubeEntity: Entity
+    private var rotation: Float = 0f
 
     override fun cleanup() { }
 
@@ -139,42 +143,40 @@ object Main : IGame {
     }
 
     override fun input(window: Window, scene: Scene, diffTimeMillis: Long) {
-       displInc.zero();
-        if (window.isKeyPressed(GLFW_KEY_UP)) {
-            displInc.y = 1f;
-        } else if (window.isKeyPressed(GLFW_KEY_DOWN)) {
-            displInc.y = -1f;
-        }
-        if (window.isKeyPressed(GLFW_KEY_LEFT)) {
-            displInc.x = -1f;
-        } else if (window.isKeyPressed(GLFW_KEY_RIGHT)) {
-            displInc.x = 1f;
+        val move = diffTimeMillis * MOVEMENT_SPEED
+        val camera = scene.getCamera()
+        if (window.isKeyPressed(GLFW_KEY_W)) {
+            camera.moveForward(move)
+        } else if (window.isKeyPressed(GLFW_KEY_S)) {
+            camera.moveBackward(move)
         }
         if (window.isKeyPressed(GLFW_KEY_A)) {
-            displInc.z = -1f;
-        } else if (window.isKeyPressed(GLFW_KEY_Q)) {
-            displInc.z = 1f;
+            camera.moveLeft(move)
+        } else if (window.isKeyPressed(GLFW_KEY_D)) {
+            camera.moveRight(move)
         }
-        if (window.isKeyPressed(GLFW_KEY_Z)) {
-            displInc.w = -1f;
-        } else if (window.isKeyPressed(GLFW_KEY_X)) {
-            displInc.w = 1f;
+        if (window.isKeyPressed(GLFW_KEY_UP)) {
+            camera.moveUp(move)
+        } else if (window.isKeyPressed(GLFW_KEY_DOWN)) {
+            camera.moveDown(move)
         }
 
-        displInc.mul(diffTimeMillis / 1000.0f);
-
-        val entityPos = cubeEntity.getPosition();
-        cubeEntity.setPosition(displInc.x + entityPos.x, displInc.y + entityPos.y, displInc.z + entityPos.z);
-        cubeEntity.setScale(cubeEntity.getScale() + displInc.w);
-        cubeEntity.updateModelMatrix();
+        val mouseInput: MouseInput = window.getMouseInput()
+        if (mouseInput.isRightButtonPressed()) {
+            val displVec = mouseInput.getDisplVec()
+            camera.addRotation(
+                Math.toRadians((displVec.x * MOUSE_SENSITIVITY).toDouble()).toFloat(),
+                Math.toRadians((displVec.y * MOUSE_SENSITIVITY).toDouble()).toFloat()
+            )
+        }
     }
 
     override fun update(window: Window, scene: Scene, diffTimeMillis: Long) {
-        rotation += 1.5f;
-        if (rotation > 360) {
-            rotation = 0f;
-        }
-        cubeEntity.setRotation(1f, 1f, 1f, Math.toRadians(rotation.toDouble()).toFloat());
-        cubeEntity.updateModelMatrix();
+//        rotation += 1.5f;
+//        if (rotation > 360) {
+//            rotation = 0f;
+//        }
+//        cubeEntity.setRotation(1f, 1f, 1f, Math.toRadians(rotation.toDouble()).toFloat());
+//        cubeEntity.updateModelMatrix();
     }
 }

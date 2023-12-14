@@ -10,6 +10,7 @@ open class Window(title: String, opts: WindowOptions, private val resizeFunc: Ca
     private var windowHandle: Long
     private var width: Int
     private var height: Int
+    private val mouseInput: MouseInput
 
     init {
         if (!glfwInit()) throw IllegalStateException("Unable to initialize GLFW")
@@ -54,6 +55,8 @@ open class Window(title: String, opts: WindowOptions, private val resizeFunc: Ca
         glfwGetFramebufferSize(windowHandle, arrWidth, arrHeight)
         width = arrWidth[0]
         height = arrHeight[0]
+
+        mouseInput = MouseInput(windowHandle)
     }
 
     fun cleanup() {
@@ -95,4 +98,5 @@ open class Window(title: String, opts: WindowOptions, private val resizeFunc: Ca
 
     fun getWidth(): Int = width
     fun getHeight(): Int = height
+    fun getMouseInput(): MouseInput = mouseInput
 }

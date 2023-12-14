@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d04bc2ec-990e-485b-a37e-908d42c1611d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Material.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Texture.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/TextureCache.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/MouseInput.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Camera.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Model.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/shaders/scene.vert" beforeDir="false" afterPath="$PROJECT_DIR$/resources/shaders/scene.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Engine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Engine.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Window.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Window.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" afterDir="false" />
     </list>
@@ -23,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -89,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702483008207</updated>
       <workItem from="1702559446012" duration="868000" />
-      <workItem from="1702560327744" duration="3095000" />
+      <workItem from="1702560327744" duration="5641000" />
     </task>
     <servers />
   </component>
