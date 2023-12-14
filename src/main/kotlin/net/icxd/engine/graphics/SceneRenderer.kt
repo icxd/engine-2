@@ -23,20 +23,30 @@ class SceneRenderer {
         uniformsMap = UniformsMap(shaderProgram.getProgramId())
         uniformsMap.createUniform("projectionMatrix")
         uniformsMap.createUniform("modelMatrix")
+        uniformsMap.createUniform("txtSampler")
     }
 
     fun render(scene: Scene) {
         shaderProgram.bind()
         uniformsMap.setUniform("projectionMatrix", scene.getProjection().getProjMatrix())
+        uniformsMap.setUniform("txtSampler", 0)
 
         val models = scene.getModelMap().values
+        val textureCache = scene.getTextureCache()
         for (model in models) {
-            model.getMeshList().forEach { mesh ->
-                glBindVertexArray(mesh.getVaoId())
-                val entities = model.getEntitiesList()
-                for (entity in entities) {
-                    uniformsMap.setUniform("modelMatrix", entity.getModelMatrix())
-                    glDrawElements(GL_TRIANGLES, mesh.getNumVertices(), GL_UNSIGNED_INT, 0)
+            val entities = model.getEntitiesList()
+
+            for (material in model.getMaterialList()) {
+                val texture = textureCache.getTexture(material.getTexturePath())
+                glActiveTexture(GL_TEXTURE0)
+                texture.bind()
+
+                for (mesh in material.getMeshList()) {
+                    glBindVertexArray(mesh.getVaoId())
+                    for (entity in entities) {
+                        uniformsMap.setUniform("modelMatrix", entity.getModelMatrix())
+                        glDrawElements(GL_TRIANGLES, mesh.getNumVertices(), GL_UNSIGNED_INT, 0)
+                    }
                 }
             }
         }

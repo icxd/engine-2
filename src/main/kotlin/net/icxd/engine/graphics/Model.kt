@@ -2,11 +2,11 @@ package net.icxd.engine.graphics
 
 import net.icxd.engine.scene.Entity
 
-class Model(private val id: String, private val meshList: List<Mesh>) {
+class Model(private val id: String, private val materialList: List<Material>) {
     private val entitiesList: MutableList<Entity> = mutableListOf()
 
-    fun cleanup() = meshList.forEach { it.cleanup() }
+    fun cleanup() = materialList.forEach(Material::cleanup)
     fun getEntitiesList() = entitiesList
     fun getId() = id
-    fun getMeshList() = meshList
+    fun getMaterialList(): List<Material> = materialList
 }

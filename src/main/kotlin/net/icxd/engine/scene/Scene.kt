@@ -1,10 +1,12 @@
 package net.icxd.engine.scene
 
 import net.icxd.engine.graphics.Model
+import net.icxd.engine.graphics.TextureCache
 
 class Scene(private val width: Int, private val height: Int) {
     private val modelMap: MutableMap<String, Model> = mutableMapOf()
     private val projection: Projection = Projection(width, height)
+    private val textureCache: TextureCache = TextureCache()
 
     fun addEntity(entity: Entity) {
         val modelId = entity.getModelId()
@@ -17,5 +19,6 @@ class Scene(private val width: Int, private val height: Int) {
 
     fun getModelMap() = modelMap
     fun getProjection() = projection
+    fun getTextureCache(): TextureCache = textureCache
     fun resize(width: Int, height: Int) = projection.updateProjMatrix(width, height)
 }

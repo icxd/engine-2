@@ -5,32 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d04bc2ec-990e-485b-a37e-908d42c1611d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/shaders/scene.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/shaders/scene.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Engine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/IGame.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Window.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Mesh.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Model.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Renderer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/ShaderProgram.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Entity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Projection.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/util/ConsoleColor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/util/File.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/util/Logger.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Material.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Texture.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/TextureCache.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Model.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +47,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "E:/Dev/kotlin/city-builder/src/main/kotlin/net/icxd/engine"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/dev/kotlin/engine-2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,6 +61,7 @@
       <recent name="E:\Dev\kotlin\city-builder\src\main\kotlin\net\icxd\engine" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\kotlin\engine-2\resources\models" />
       <recent name="E:\Dev\kotlin\city-builder\resources" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -84,7 +74,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.icxd.game.Main" />
-      <module name="city-builder" />
+      <module name="engine-2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,8 +88,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702483008207</updated>
+      <workItem from="1702559446012" duration="868000" />
+      <workItem from="1702560327744" duration="3095000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

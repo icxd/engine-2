@@ -15,9 +15,14 @@ class UniformsMap(private val programId: Int) {
         uniformsMap[uniformName] = uniformLocation
     }
 
+    private fun getUniformLocation(uniformName: String): Int =
+        uniformsMap[uniformName] ?: throw RuntimeException("Could not find uniform $uniformName")
+
+    fun setUniform(uniformName: String, value: Int) = glUniform1i(getUniformLocation(uniformName), value)
+
     fun setUniform(uniformName: String, value: Matrix4f) {
         MemoryStack.stackPush().use { stack ->
-            glUniformMatrix4fv(uniformsMap[uniformName]!!, false, value.get(stack.mallocFloat(16)))
+            glUniformMatrix4fv(getUniformLocation(uniformName), false, value.get(stack.mallocFloat(16)))
         }
     }
 
