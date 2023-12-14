@@ -25,6 +25,7 @@ class SceneRenderer {
         uniformsMap.createUniform("modelMatrix")
         uniformsMap.createUniform("viewMatrix")
         uniformsMap.createUniform("txtSampler")
+        uniformsMap.createUniform("material.diffuse")
     }
 
     fun render(scene: Scene) {
@@ -40,6 +41,7 @@ class SceneRenderer {
             val entities = model.getEntitiesList()
 
             for (material in model.getMaterialList()) {
+                uniformsMap.setUniform("material.diffuse", material.getDiffuseColor())
                 val texture = textureCache.getTexture(material.getTexturePath())
                 glActiveTexture(GL_TEXTURE0)
                 texture.bind()

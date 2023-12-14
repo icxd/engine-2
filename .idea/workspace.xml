@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d04bc2ec-990e-485b-a37e-908d42c1611d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/MouseInput.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Camera.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/models/cube/cube.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/models/cube/cube.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/util/ModelLoader.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/shaders/scene.vert" beforeDir="false" afterPath="$PROJECT_DIR$/resources/shaders/scene.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/models/cube.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/models/cube/cube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/models/default_texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/models/default/default_texture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/shaders/scene.frag" beforeDir="false" afterPath="$PROJECT_DIR$/resources/shaders/scene.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Engine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Engine.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Window.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/Window.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Material.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Material.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Renderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/Renderer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/SceneRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/scene/Scene.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/TextureCache.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/TextureCache.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/engine/graphics/UniformsMap.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/icxd/game/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +59,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,6 +70,8 @@
       <recent name="E:\Dev\kotlin\city-builder\src\main\kotlin\net\icxd\engine" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\kotlin\engine-2\resources\models\cube" />
+      <recent name="C:\dev\kotlin\engine-2\resources\models\default" />
       <recent name="C:\dev\kotlin\engine-2\resources\models" />
       <recent name="E:\Dev\kotlin\city-builder\resources" />
     </key>
@@ -90,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702483008207</updated>
       <workItem from="1702559446012" duration="868000" />
-      <workItem from="1702560327744" duration="5641000" />
+      <workItem from="1702560327744" duration="9714000" />
     </task>
     <servers />
   </component>

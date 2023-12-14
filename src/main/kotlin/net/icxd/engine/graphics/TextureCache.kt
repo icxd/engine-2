@@ -2,7 +2,7 @@ package net.icxd.engine.graphics
 
 class TextureCache {
     companion object {
-        const val DEFAULT_TEXTURE: String = "resources/models/default_texture.png"
+        const val DEFAULT_TEXTURE: String = "resources/models/default/default_texture.png"
     }
 
     private val textureMap: MutableMap<String, Texture> = mutableMapOf()

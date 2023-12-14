@@ -3,6 +3,7 @@ package net.icxd.engine
 import net.icxd.engine.graphics.Renderer
 import net.icxd.engine.scene.Scene
 import net.icxd.game.Main
+import org.lwjgl.opengl.GL11.*
 
 class Engine(windowTitle: String, opts: Window.Companion.WindowOptions, private val game: Main) {
     companion object {
@@ -50,6 +51,8 @@ class Engine(windowTitle: String, opts: Window.Companion.WindowOptions, private 
         var updateTime = initialTime
         while (running && !window.windowShouldClose()) {
             window.pollEvents()
+
+            glClearColor(1.0f, 1.0f, 1.0f, 1.0f)
 
             val now = System.currentTimeMillis()
             deltaUpdate += (now - initialTime) / timeU

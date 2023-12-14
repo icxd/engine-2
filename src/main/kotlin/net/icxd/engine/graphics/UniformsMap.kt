@@ -1,6 +1,7 @@
 package net.icxd.engine.graphics
 
 import org.joml.Matrix4f
+import org.joml.Vector4f
 import org.lwjgl.opengl.GL20.*
 import org.lwjgl.system.MemoryStack
 
@@ -25,5 +26,7 @@ class UniformsMap(private val programId: Int) {
             glUniformMatrix4fv(getUniformLocation(uniformName), false, value.get(stack.mallocFloat(16)))
         }
     }
+
+    fun setUniform(uniformName: String, value: Vector4f) { glUniform4f(getUniformLocation(uniformName), value.x(), value.y(), value.z(), value.w()) }
 
 }
