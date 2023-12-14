@@ -37,7 +37,7 @@ class Mesh(positions: FloatArray, colors: FloatArray, indices: IntArray) {
         glBindBuffer(GL_ARRAY_BUFFER, vboId)
         glBufferData(GL_ARRAY_BUFFER, colorsBuffer, GL_STATIC_DRAW)
         glEnableVertexAttribArray(1)
-        glVertexAttribPointer(1, 3, GL_FLOAT, false, 0, 0)
+        glVertexAttribPointer(1, 2, GL_FLOAT, false, 0, 0)
 
         // Index VBO
         vboId = glGenBuffers()
